@@ -11,3 +11,7 @@ ex04 : 번들링 : webpack
         - 5) 번들링
     - 5. JavaScript 뿐만 아니라 다양한 assets(image, css, font...)들도 모듈로
     - 6. 설치
+        - $ npm i -D webpack webpack-cli
+        - $ npm .\node_modules\.bin\webpack --version
+        - $ npx webpack --version
+        - $ npx webpack ./src/index.js -o ./public
