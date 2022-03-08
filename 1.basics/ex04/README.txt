@@ -15,3 +15,5 @@ ex04 : 번들링 : webpack
         - $ npm .\node_modules\.bin\webpack --version
         - $ npx webpack --version
         - $ npx webpack ./src/index.js -o ./public
+    - 7. package json scripting("build" stage)
+    - 8. $ npm run build
