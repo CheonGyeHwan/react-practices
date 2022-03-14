@@ -1,4 +1,5 @@
 import React from 'react'
+import FoodList from './FoodList'
 
 const App = function() {
     const foods = [
