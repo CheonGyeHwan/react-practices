@@ -4,7 +4,7 @@ import './assets/css/App.css';
 const App = () => {
   return (
     <div>
-        <h1 className={"Header"}>{"Normal CSS(css loader options : (module: false))"}</h1>
+        <h1 className={"Header"}>{"Normal CSS(css loader options : (module: true))"}</h1>
     </div>
   )
 }
