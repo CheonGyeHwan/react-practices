@@ -27,4 +27,5 @@ ex01: Property
     "build": "npx webpack"
   }
 
-실행
+4. 실행
+    $ npm run debug "src=01|02|..."
