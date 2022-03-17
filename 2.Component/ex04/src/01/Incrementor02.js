@@ -2,7 +2,6 @@ import React, {useState} from 'react';
 
 export default function ({ begin, step }) {
     const [val, setVal] = useState(begin);
-    
 
     return (
         <div>
