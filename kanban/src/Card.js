@@ -1,8 +1,10 @@
-import React from 'react';
+import React, { useState } from 'react';
 import styles from './assets/css/Card.css';
 import TaskList from './TaskList';
 
 const Card = ({ card }) => {
+    const [showDetails, setShowDetails] = useState(false);
+
     return (
         <>
             <div className={ styles.Card }>

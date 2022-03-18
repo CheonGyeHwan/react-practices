@@ -14,8 +14,12 @@ ex04 : Component - State
       - 2) 예제 : src/01
 
     2. 제어 컴포넌트
-      - src/02 : 제어 컴포넌트
-      - src/03 : 비제어 컴포넌트
+      - 1) input, textarea, option과 같은 form 컴포넌트 중에 사용자 입력에 따라서 state값이 변경되고, Rendering하는 컴포넌트를 제어(Controlled) 컴포넌트라 한다.
+      - 2) 
+      - 3)
+      - 4) 예제
+        - src/02 : 제어 컴포넌트
+        - src/03 : 비제어 컴포넌트
     
     3. 상태(Stateful) 컴포넌트 vs 순수(Pure, Dumb) 컴포넌트
       - emaillist

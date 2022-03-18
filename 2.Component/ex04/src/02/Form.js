@@ -37,13 +37,12 @@ export default function Form() {
                 id="email"
                 name="email"
                 type="text"
-                value={ email }
                 onChange={ onChangeInputEmail }
             />
             {
                 email === '' ? null : (validEmail ?
-                                        <FontAwesomeIcon icon={ faCircleCheck } style={ {fontsize : 16, color : "blue"} }/> :
-                                        <FontAwesomeIcon icon={ faTimesCircle } style={ {fontsize : 16, color : "red"} }/>
+                                        <FontAwesomeIcon icon={ faCircleCheck } style={ {marginleft : 5, fontsize : 16, color : "blue"} }/> :
+                                        <FontAwesomeIcon icon={ faTimesCircle } style={ {marginleft : 5, fontsize : 16, color : "red"} }/>
                 )
             }
 
