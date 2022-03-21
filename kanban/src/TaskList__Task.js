@@ -1,7 +1,8 @@
 import React, { useState } from 'react';
 import styles from './assets/css/TaskList__Task.css';
+import PropTypes from 'prop-types';
 
-const TaskList__Task = ({ task }) => {
+export default function TaskList__Task({ task }) {
     const [taskCheck, setTaskCheck] = useState(task.done);
 
     const onChangetaskCheck = (e) =>{
@@ -18,6 +19,12 @@ const TaskList__Task = ({ task }) => {
             </li>
         </>
   );
-}
+};
 
-export default TaskList__Task;
+TaskList__Task.propTypes = {
+    task: PropTypes.object.isRequired
+};
+
+TaskList__Task.defaultProps = {
+    task: {}
+}

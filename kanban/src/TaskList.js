@@ -1,7 +1,8 @@
 import React from 'react';
 import TaskList__Task from './TaskList__Task';
+import PropTypes from 'prop-types';
 
-const TaskList = ({ taskList }) => {
+export default function TaskList({ taskList }) {
   return (
     <div className={ 'TaskList' }> 
         <ul>
@@ -9,6 +10,12 @@ const TaskList = ({ taskList }) => {
         </ul>
     </div>
   )
-}
+};
 
-export default TaskList;
+TaskList.propTypes = {
+  taskList: PropTypes.array.isRequired
+};
+
+TaskList.defaultProps = {
+  taskList: []
+}

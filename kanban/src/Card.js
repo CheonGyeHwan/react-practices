@@ -1,8 +1,9 @@
 import React, { useState } from 'react';
 import styles from './assets/css/Card.css';
 import TaskList from './TaskList';
+import PropTypes from 'prop-types';
 
-const Card = ({ card }) => {
+export default function Card({ card }) {
     const [showDetails, setShowDetails] = useState(false);
 
     const clickTitle = function(e) {
@@ -23,6 +24,12 @@ const Card = ({ card }) => {
             </div>
         </>
     );
+};
+
+Card.propTypes = {
+    card: PropTypes.object.isRequired
 }
 
-export default Card;
+Card.defaultProps = {
+    card: {}
+}
