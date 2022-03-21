@@ -1,7 +1,8 @@
 import React from 'react';
 import styles from './assets/scss/Email.scss';
+import PropTypes from 'prop-types';
 
-const Email = ({ email }) => {
+export default function Email({ email }) {
     return (
         <li className={ styles.Email }>
             <h4>{email.firstName + email.lastName}</h4>
@@ -9,6 +10,8 @@ const Email = ({ email }) => {
             <span>{ email.email }</span>
         </li>  
     );
-}
+};
 
-export default Email;
+Email.propTypes = {
+    email: PropTypes.object.isRequired
+};
