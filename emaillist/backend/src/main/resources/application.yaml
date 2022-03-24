@@ -7,12 +7,6 @@ spring:
 # common spring boot configuration
 spring:
    mvc:
-
-      # Spring MVC View Prefix/Suffix
-      view:
-         prefix: /WEB-INF/views/
-         suffix: .jsp
-
       # Path pattern used for static resources
       static-path-pattern: /assets/**
 
