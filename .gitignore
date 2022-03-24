@@ -1,4 +1,10 @@
+# JavaScript Project
 **/node_modules
+
+# IDE (VSCode, Eclipse, IntelliJ
+**/.vscode
+**/.sln
+**/.sw?
 
 **/.classpath
 **/.project
@@ -11,4 +17,5 @@
 
 **/build
 
+# for mac
 */DS_Store
