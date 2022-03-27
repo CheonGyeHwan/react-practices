@@ -14,13 +14,13 @@ module.exports = function(env) {
                 exclude: /node_modules/,
                 loader: 'babel-loader',
                 options: {
-                    configFile: path.resolve("config/babel.config.json")
+                    configFile: path.resolve('config/babel.config.json')
                 }
             }, {
                 test: /\.(sa|sc|c)ss$/i,
                 use: [
                     'style-loader',
-                    { loader: 'css-loader', options: { modules: true } },
+                    {loader: 'css-loader', options: {modules: true}},
                     'sass-loader'
                 ]
             }, {
@@ -32,7 +32,7 @@ module.exports = function(env) {
             host: '0.0.0.0',
             port: 9090,
             proxy: {
-                '/api': 'http://localhost:8080'
+                '/api': 'http://localhost:8888'
             },
             liveReload: true,
             hot: false,
