@@ -6,14 +6,14 @@ export default function TaskList__Task({ task }) {
     const [taskCheck, setTaskCheck] = useState(task.done);
 
     const onChangetaskCheck = (e) =>{
-        task.done = !taskCheck;
-        setTaskCheck(!taskCheck);
+        task.done = (taskCheck === "Y" ? "N" : "Y");
+        setTaskCheck(task.done);
     }
 
     return (
         <>
             <li className={ styles.TaskList__Task }>
-                <input type={ 'checkbox' } value= { taskCheck } checked={ taskCheck } onChange={ onChangetaskCheck } />
+                <input type={ 'checkbox' } value= { taskCheck } checked={ taskCheck === "Y" } onChange={ onChangetaskCheck } />
                 { task.name }
                 <a href={ '#' } className={ styles.TaskList__Task__remove }></a>
             </li>
