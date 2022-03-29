@@ -12,6 +12,6 @@ public class CardRepository {
 	private SqlSession sqlSession;
 	
 	public List<CardVo> findAll() {
-		return sqlSession.selectList("kanbanboard.findAllToCard");
+		return sqlSession.selectList("card.findAll");
 	}
 }

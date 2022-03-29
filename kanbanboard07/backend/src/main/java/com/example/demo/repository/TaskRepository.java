@@ -11,7 +11,20 @@ public class TaskRepository {
 	@Autowired
 	private SqlSession sqlSession;
 	
-	public List<TaskVo> findAll() {
-		return sqlSession.selectList("kanbanboard.findAllToTask");
+	public List<TaskVo> findAll(Long cardNo) {
+		return sqlSession.selectList("task.findAll", cardNo);
 	}
+	
+	public boolean insertTask(TaskVo taskVo) {
+		return sqlSession.insert("task.insertTask", taskVo) == 1;
+	}
+	
+	public boolean updateTask(TaskVo taskVo) {
+		return sqlSession.update("task.updateTask", taskVo) == 1; 
+	}
+	
+	public boolean deleteTask(TaskVo taskVo) {
+		return sqlSession.delete("task.deleteTask", taskVo) == 1;
+	}
+	
 }
