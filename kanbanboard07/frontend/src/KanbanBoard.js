@@ -10,10 +10,8 @@ const KanbanBoard = () => {
                const response = await fetch('/api/card', {
                     method: 'get',
                     header: {
-                         'Content-Type': 'application/json',
                          'Accept': 'application/json'
-                    },
-                    body: null
+                    }
                });
 
                if (!response.ok) {

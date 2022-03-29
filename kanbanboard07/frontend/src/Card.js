@@ -17,10 +17,8 @@ export default function Card({ card }) {
             const response = await fetch('/api/task', {
                 method: 'get',
                 header: {
-                    'Content-Type': 'application.json',
                     'Accept': 'application/json'
-                },
-                body: null
+                }
             });
 
             if (!response.ok) {
