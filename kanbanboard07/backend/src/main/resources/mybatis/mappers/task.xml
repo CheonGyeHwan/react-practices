@@ -3,7 +3,7 @@
 <mapper namespace="task">
 	<select id="findAll" resultType="taskvo" parameterType="long">
 		<![CDATA[
-			SELECT no, name, done, card_no FROM task WHERE card_no = #{cardNo}
+			SELECT no, name, done, card_no FROM task WHERE card_no = #{cardNo} ORDER BY no DESC
 		]]>
 	</select>
 	
@@ -11,6 +11,11 @@
 		<![CDATA[
 			INSERT INTO task VALUES (null, #{name}, #{done}, #{cardNo})
 		]]>
+		<selectKey keyProperty="no" resultType="long" order="AFTER">
+			<![CDATA[
+		  	select last_insert_id()
+	  		]]>
+	  	</selectKey>
 	</insert>
 	
 	<update id="updateTask" parameterType="taskvo">

@@ -37,7 +37,8 @@ public class ApiController {
 	
 	@PostMapping("/task")
 	public ResponseEntity<JsonResult> createToTask(@RequestBody TaskVo taskVo) {
-		return ResponseEntity.status(HttpStatus.OK).body(JsonResult.success(taskRepository.insertTask(taskVo)));
+		taskRepository.insertTask(taskVo);
+		return ResponseEntity.status(HttpStatus.OK).body(JsonResult.success(taskVo));
 	}
 	
 	@PutMapping("/task")

@@ -58,7 +58,7 @@ export default function Card({ card }) {
                 throw new Error(`${json.result} ${json.message}`);
             }
 
-            findAll();
+            setTasks([json.data, ...tasks ]);
         } catch (err) {
             console.error(err);
         }

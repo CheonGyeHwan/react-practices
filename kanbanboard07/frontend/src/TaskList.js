@@ -21,6 +21,7 @@ export default function TaskList({ taskList, cardNo, addCallback, updateCallback
                       cardNo: cardNo
                     };
                     
+                    e.target.value="";
                     addCallback(newTask);
                   } catch (err) {
                     console.error(err);
