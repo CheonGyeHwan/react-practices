@@ -7,7 +7,7 @@
 ### ex05: Styling &amp; Semantic Markup
 ### ex06: Composition
 ### ex07: Nesting Routes
-### ex08: BrowserRouter & SSR
+### ex08: useRouter
 
 ### Install Dependency
 1. react-router: 6.0.x(2021.6 beta)
