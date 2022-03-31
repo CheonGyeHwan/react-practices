@@ -5,29 +5,27 @@ import Guestbook from "./component/Guestbook";
 
 export default function App() {
     const [route, setRoute] = useState('');
-
-    const handleHashChange = () => {
+     const handleHashChange = () => {
         console.log(window.location.hash);
         setRoute(window.location.hash.substring(1));
     };
 
     useEffect(() => {
-        window.addEventListener('hashchange', handleHashChange);
-
+        window.addEventListener("hashchange", handleHashChange);
         return () => {
-            window.removeEventListener('hashchange', handleHashChange);
+            window.removeEventListener("hashchange", handleHashChange);
         };
     }, []);
-
-    return (function() {
+    
+    return (() => {
         switch(route) {
             case '/' :
                 return <Main />;
-            case '/guestbook' :
+            case '/guestbook':
                 return <Guestbook />;
-            case '/gallery' :
+            case '/gallery':
                 return <Gallery />;
-            default :
+            default:
                 return null;
         }
     })();

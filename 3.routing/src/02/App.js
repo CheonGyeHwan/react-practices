@@ -7,21 +7,24 @@ export default function App() {
     const [route, setRoute] = useState({page: '/'});
 
     useEffect(() => {
-        const handlePopState = (e) => { setRoute(e.state); };
+        const handlePopState = (e) => setRoute(e.state);
+        
+        window.addEventListener("popstate", handlePopState);
 
-        window.addEventListener('popstate', handlePopState);
-        return window.removeEventListener('popstate', handlePopState);
+        return () => {
+            window.removeEventListener("popstate", handlePopState);
+        }
     }, []);
 
     const handleLinkClick = (e) => {
         e.preventDefault();
-        
-        const url = (e.target.href.substring(e.target.href.lastIndexOf('/')));
+
+        const url = e.target.href.substring(e.target.href.lastIndexOf("/"));
         console.log(url);
 
         window.history.pushState({page: url}, e.target.text, url);
         setRoute({page: url});
-    };
+    }
 
     return (
         <div>
@@ -35,7 +38,7 @@ export default function App() {
                         case '/guestbook':
                             return <Guestbook/>;
                         default:
-                            return null;
+                            return null; 
                     }
                 })()
             }
