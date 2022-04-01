@@ -19,8 +19,8 @@ export default function App() {
                 <Route path='/' element={<Main />}/>
                 <Route path='gallery' element={<Gallery />}/>
                 <Route path='guestbook' element={<Guestbook />}/>
-                <Route exact path='about' element={<About />}>
-                    <Route path='me' element={<Me />}/>
+                <Route element={<About />}>
+                    <Route path='about/me' element={<Me />}/>
                 </Route>
                 <Route path='user/login' element={<Login />}/>
                 <Route path='user/settings' element={<Settings />}/>
