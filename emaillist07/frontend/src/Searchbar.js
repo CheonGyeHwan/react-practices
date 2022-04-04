@@ -1,5 +1,5 @@
 import React from 'react';
-import styles from './assets/scss/Searchbar.scss';
+import styles from './assets/scss/SearchBar.scss';
 import PropTypes from 'prop-types';
 
 export default function Searchbar({ callback }) {
