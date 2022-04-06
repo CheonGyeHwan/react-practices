@@ -47,7 +47,7 @@ spring:
    web:
       resources:
          # locations of static resources
-         static-locations: classpath:/static/, file:C:/upload-images/mysite-uploads/gallery
+         static-locations: classpath:/assets/, file:C:/upload-images/mysite-uploads/gallery
 
    # devtools enabled
    devtools:
@@ -87,7 +87,7 @@ spring:
    web:
       resources:
          # locations of static resources
-         static-locations: classpath:/static/, file:/mysite-uploads/
+         static-locations: classpath:/assets/, file:/mysite-uploads/
               
    # datasource
    datasource:
